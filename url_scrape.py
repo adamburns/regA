@@ -21,9 +21,19 @@ def modify_url(startDoc):
     return URL
 
 
-def export_urls():
+def open_output_file():
+    try:
+        output = open("links.txt", "a")
+        output.write("\n")
+    except OSError as err:
+        print(err)
+    return output
+
+
+def export_links(output):
+    soup = bs.BeautifulSoup(broth, 'lxml')
     for a in soup.find_all('a', href=True):
         output.write(a['href'])
         output.write("\n")
-
-
+    output.close()
+    
