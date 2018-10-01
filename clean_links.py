@@ -11,7 +11,7 @@ def clean_links():
     for line in range(0, lines):
         if "opennew" in data[line]:
             newline = data[line][data[line].rfind("opennew")+9:data[line].rfind("xml")+3]
-            newline = newline[:-27] + "primary_doc.xml"
+            newline = newline[39:-48]
             output.write(newline)
             output.write("\n")
 
