@@ -1,10 +1,10 @@
 LINKS = "links.txt"
-URLS = "urls.txt"
+CIKS = "ciks.txt"
 
 
 def clean_links():
     input = open(LINKS, "r")
-    output = open(URLS, "w")
+    output = open(CIKS, "w")
     data = input.readlines()
     lines = sum(1 for line in open(LINKS))
 
