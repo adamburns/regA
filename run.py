@@ -1,4 +1,6 @@
 import url_scrape as us
+import clean_links as cl
+import clean_xml as cx
 
 
 def main():
@@ -13,9 +15,11 @@ def get_links():
     us.close_output_file(output)
 
 
-def scrape_links():
-    print("todo")    
-    
+def clean_links():
+
+
+def clean_xml():
+
 
 if __name__ == "__main__":
     main()
